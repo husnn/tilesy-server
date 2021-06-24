@@ -1,0 +1,13 @@
+require("dotenv-flow").config();
+
+const config = require("../config");
+const app = require("../src/index.js").app;
+
+app.listen(config.port, () => {console.log("App running at "
+        + config.httpProtocol
+        + "://"
+        + config.host
+        + ":"
+        + config.port
+    );
+});
